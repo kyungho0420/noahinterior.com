@@ -20,7 +20,7 @@ const siteConfig = {
         turnstile: '0x4AAAAAACJQlCjpqGMqegcx'
     },
     buttons: [
-        { name: 'Overview', icon: 'home', url: '#overview' },
+        { name: 'Overview', icon: 'home', url: '#home' },
         { name: 'Portfolio', icon: 'style', url: '#portfolio' },
         { name: 'Location', icon: 'location_on', url: '#location' },
         { name: 'Request', icon: 'post_add', url: './request' }
