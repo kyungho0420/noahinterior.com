@@ -1,5 +1,8 @@
 const siteConfig = {
     meta: {
+        framework: 'V4',
+        type: 'page',
+        mode: 'demo',
         lang: 'ko'
     },
     canvas: {
@@ -13,7 +16,7 @@ const siteConfig = {
         image_format: 'webp'
     },
     api: {
-        provider: true,
+        damso: true,
         turnstile: '0x4AAAAAACJQlCjpqGMqegcx'
     },
     buttons: [
@@ -24,6 +27,8 @@ const siteConfig = {
     ]
 };
 
-if (window.PV4) {
-    window.PV4.init(siteConfig);
-}
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.V4) {
+        window.V4.init(siteConfig);
+    }
+});
