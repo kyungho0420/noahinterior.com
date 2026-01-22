@@ -2,7 +2,7 @@ const siteConfig = {
     meta: {
         framework: 'V4',
         type: 'page',
-        mode: 'demo',
+        mode: 'live',
         lang: 'ko'
     },
     canvas: {
