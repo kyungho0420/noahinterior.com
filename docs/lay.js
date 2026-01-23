@@ -1,9 +1,18 @@
+/**
+ * Noah Interior
+ */
 const siteConfig = {
     meta: {
         framework: 'V4',
         type: 'page',
         mode: 'live',
-        lang: 'ko'
+        lang: 'ko',
+        theme: true
+    },
+    api: {
+        damso: true,
+        turnstile: '0x4AAAAAACJQlCjpqGMqegcx',
+        redirect: '../'
     },
     canvas: {
         target: '#home',
@@ -14,10 +23,6 @@ const siteConfig = {
         image_slide: 6,
         image_path: './section/',
         image_format: 'webp'
-    },
-    api: {
-        server: 'damso',
-        turnstile: '0x4AAAAAACJQlCjpqGMqegcx'
     },
     buttons: [
         { name: 'Overview', icon: 'home', url: '#home' },

@@ -1,17 +1,19 @@
+/**
+ * Noah Interior Request
+ */
 const siteConfig = {
     meta: {
         framework: 'V4',
         type: 'form',
         mode: 'demo',
         lang: 'ko',
-        theme: false,
-        theme_color: '#000000'
+        theme: false
     },
     api: {
-        server: 'damso',
-        turnstile: '0x4AAAAAACJQlCjpqGMqegcx'
+        damso: true,
+        turnstile: '0x4AAAAAACJQlCjpqGMqegcx',
+        redirect: '../'
     },
-    redirect: '../',
     allowed_extensions: ['jpg', 'png', 'pdf', 'zip']
 };
 
