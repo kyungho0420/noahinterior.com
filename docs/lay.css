@@ -4,28 +4,28 @@
 
 :root {
     /* [User Variables] - Soft Brown Palette (Mapped to Standard Vars) */
-    --pv-color-primary: #795548;
+    --damso-color-primary: #795548;
     /* Material Brown 500 */
-    --pv-color-secondary: #A1887F;
+    --damso-color-secondary: #A1887F;
     /* Material Brown 300 */
-    --pv-color-accent: #8D6E63;
+    --damso-color-accent: #8D6E63;
     /* Warm Brown */
-    --pv-color-bg: #FCFBF8;
-    --pv-color-surface: #F4F1EC;
-    --pv-color-text: #4E342E;
+    --damso-color-bg: #FCFBF8;
+    --damso-color-surface: #F4F1EC;
+    --damso-color-text: #4E342E;
     /* Dark Brown Text */
 
     /* Button Colors */
-    --pv-bg-button: var(--pv-color-primary);
-    --pv-text-button: #FFFFFF;
+    --damso-bg-button: var(--damso-color-primary);
+    --damso-text-button: #FFFFFF;
 }
 
 
 
-.pv-header__title {
+.damso-header__title {
     font-weight: 300;
 }
 
-.pv-header__title strong {
+.damso-header__title strong {
     font-weight: 900;
 }
