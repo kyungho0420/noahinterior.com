@@ -5,11 +5,11 @@
     align-items: center;
 }
 
-.request-area-group .pv-input {
+.request-area-group .damso-input {
     flex: 1;
 }
 
-.request-area-group .pv-select {
+.request-area-group .damso-select {
     width: 150px;
     flex: 0 0 150px;
     /* Fixed 150px width */

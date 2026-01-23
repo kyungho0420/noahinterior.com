@@ -1,27 +1,29 @@
 const siteConfig = {
     meta: {
+        framework: 'V4',
+        type: 'form',
+        mode: 'demo',
         lang: 'ko',
+        theme: false,
         theme_color: '#000000'
     },
     api: {
-        provider: true,
+        server: 'damso',
         turnstile: '0x4AAAAAACJQlCjpqGMqegcx'
     },
-    redirect: '../'
+    redirect: '../',
+    allowed_extensions: ['jpg', 'png', 'pdf', 'zip']
 };
 
-// Request Form Logic
 document.addEventListener('DOMContentLoaded', () => {
-    // Init PV4 Core (i18n, etc.)
-    if (window.PV4) {
-        window.PV4.init(siteConfig);
+    if (window.V4) {
+        window.V4.init(siteConfig).then(() => {
+            initCustomLogic();
+        });
     }
-
-    // Init Custom Form Logic
-    initRequestForm();
 });
 
-function initRequestForm() {
+function initCustomLogic() {
     // 1. Dynamic Sub-Options
     const typeSelect = document.querySelector('[data-ref="construction_type"]');
     const subOptContainer = document.querySelector('[data-ref="sub-options-container"]');
@@ -31,7 +33,6 @@ function initRequestForm() {
         if (!typeSelect) return;
         const val = typeSelect.value;
 
-        // Hide all first
         subOptGroups.forEach(el => el.hidden = true);
         if (subOptContainer) subOptContainer.hidden = true;
 
@@ -46,7 +47,7 @@ function initRequestForm() {
 
     if (typeSelect) {
         typeSelect.addEventListener('change', updateSubOptions);
-        updateSubOptions(); // Init
+        updateSubOptions();
     }
 
     // 2. Area Calculation
@@ -82,7 +83,6 @@ function initRequestForm() {
 
     // 3. Budget Formatting
     const budgetInput = document.querySelector('[data-ref="budget"]');
-
     if (budgetInput) {
         budgetInput.addEventListener('input', (e) => {
             let val = e.target.value;
@@ -94,10 +94,7 @@ function initRequestForm() {
             }
 
             const num = parseInt(val, 10);
-            const strNum = num.toString();
-            const formatted = strNum.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-            e.target.value = formatted;
+            e.target.value = num.toLocaleString();
         });
     }
 }

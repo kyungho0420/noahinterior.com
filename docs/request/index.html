@@ -15,13 +15,13 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <!-- [Tier 1] Provider Core -->
-    <link rel="stylesheet" href="https://cdn.dam.so/_inc/provider/v4/core/core.css">
-    <script src="https://cdn.dam.so/_inc/provider/v4/core/core.js"></script>
+    <!-- [Tier 1] Damso Core -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/v4/core/core.css">
+    <script src="https://cdn.dam.so/_inc/express/v4/core/core.js"></script>
 
-    <!-- [Tier 2] Provider View: Form -->
-    <link rel="stylesheet" href="https://cdn.dam.so/_inc/provider/v4/view/form.css">
-    <script src="https://cdn.dam.so/_inc/provider/v4/view/form.js"></script>
+    <!-- [Tier 2] Damso View: Form -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/v4/view/form.css">
+    <script src="https://cdn.dam.so/_inc/express/v4/view/form.js"></script>
 
     <!-- [Tier 3] User Custom -->
     <link rel="stylesheet" href="../lay.css">
@@ -31,76 +31,76 @@
 
 <body>
 
-    <div class="pv-app">
-        <div class="pv-container">
-            <header class="pv-header">
-                <h1 class="pv-header__title" data-lang="request_title">노아인테리어</h1>
-                <p class="pv-header__description" data-lang="request_subtitle">인테리어 무료 견적 상담</p>
+    <div class="damso-app">
+        <div class="damso-container">
+            <header class="damso-header">
+                <h1 class="damso-header__title" data-lang="request_title">노아인테리어</h1>
+                <p class="damso-header__description" data-lang="request_subtitle">인테리어 무료 견적 상담</p>
 
-                <nav class="pv-lang-switcher">
-                    <a href="?lang=ko" class="pv-lang-btn">KO</a>
-                    <a href="?lang=en" class="pv-lang-btn">EN</a>
-                    <a href="?lang=vi" class="pv-lang-btn">VI</a>
+                <nav class="damso-lang-switcher">
+                    <a href="?lang=ko" class="damso-lang-btn">KO</a>
+                    <a href="?lang=en" class="damso-lang-btn">EN</a>
+                    <a href="?lang=vi" class="damso-lang-btn">VI</a>
                 </nav>
             </header>
 
-            <form id="request-form" class="pv-form" novalidate>
+            <form id="request-form" class="damso-form" novalidate data-intent="conn.contact">
                 <input type="hidden" name="form" value="noahinterior_estimate">
 
                 <!-- 1. Customer Info -->
-                <div class="pv-card">
-                    <div class="pv-card__header">
+                <div class="damso-card">
+                    <div class="damso-card__header">
                         <h2 data-lang="request_section_info">기본 정보</h2>
-                        <span class="pv-card__badge">Profile</span>
+                        <span class="damso-card__badge">Profile</span>
                     </div>
 
-                    <!-- Client Type (New) -->
-                    <div class="pv-group">
-                        <label class="pv-label" data-lang="label_client_type">고객 유형</label>
-                        <select name="client_type" class="pv-select" required>
+                    <!-- Client Type -->
+                    <div class="damso-group">
+                        <label class="damso-label" data-lang="label_client_type">고객 유형</label>
+                        <select name="client_type" class="damso-select" required>
                             <option value="Individual" data-lang="opt_client_individual">개인</option>
                             <option value="Group" data-lang="opt_client_group">단체</option>
                             <option value="Corporate" data-lang="opt_client_corporate">회사</option>
                         </select>
                     </div>
 
-                    <div class="pv-grid pv-grid--cols-3">
-                        <div class="pv-group">
-                            <label for="name" class="pv-label" data-lang="office_label_name">Name</label>
-                            <input type="text" id="name" name="name" required class="pv-input"
+                    <div class="damso-grid damso-grid--cols-3">
+                        <div class="damso-group">
+                            <label for="name" class="damso-label" data-lang="office_label_name">Name</label>
+                            <input type="text" id="name" name="name" required class="damso-input"
                                 data-lang-placeholder="ph_name">
                         </div>
-                        <div class="pv-group">
-                            <label for="phone" class="pv-label" data-lang="office_label_phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" required class="pv-input"
+                        <div class="damso-group">
+                            <label for="phone" class="damso-label" data-lang="office_label_phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required class="damso-input"
                                 placeholder="010-0000-0000">
                         </div>
-                        <div class="pv-group">
-                            <label for="email" class="pv-label" data-lang="office_label_email">Email</label>
-                            <input type="email" id="email" name="email" required class="pv-input"
+                        <div class="damso-group">
+                            <label for="email" class="damso-label" data-lang="office_label_email">Email</label>
+                            <input type="email" id="email" name="email" required class="damso-input"
                                 placeholder="example@email.com">
                         </div>
                     </div>
                 </div>
 
                 <!-- 2. Construction Details -->
-                <div class="pv-card">
-                    <div class="pv-card__header">
+                <div class="damso-card">
+                    <div class="damso-card__header">
                         <h2 data-lang="request_section_details">시공 내용</h2>
-                        <span class="pv-card__badge">Details</span>
+                        <span class="damso-card__badge">Details</span>
                     </div>
 
-                    <!-- Address Field (Moved) -->
-                    <div class="pv-group">
-                        <label for="address" class="pv-label" data-lang="location_label_address">Address</label>
-                        <input type="text" id="address" name="address" class="pv-input"
+                    <!-- Address -->
+                    <div class="damso-group">
+                        <label for="address" class="damso-label" data-lang="location_label_address">Address</label>
+                        <input type="text" id="address" name="address" class="damso-input"
                             data-lang-placeholder="ph_address">
                     </div>
 
                     <!-- Type Selection -->
-                    <div class="pv-group">
-                        <label class="pv-label" data-lang="label_construction_type">시공 유형</label>
-                        <select name="construction_type" id="construction_type" class="pv-select" required
+                    <div class="damso-group">
+                        <label class="damso-label" data-lang="label_construction_type">시공 유형</label>
+                        <select name="construction_type" id="construction_type" class="damso-select" required
                             data-ref="construction_type">
                             <option value="" data-lang="label_construction_type">선택해주세요</option>
                             <option value="residential" data-lang="opt_type_residential">주택</option>
@@ -111,98 +111,99 @@
                     </div>
 
                     <!-- Dynamic Sub Options -->
-                    <div id="sub-options-container" class="pv-group pv-surface pv-radius-md" style="padding: 1rem;"
-                        hidden data-ref="sub-options-container">
+                    <div id="sub-options-container" class="damso-group damso-surface damso-radius-md"
+                        style="padding: 1rem;" hidden data-ref="sub-options-container">
                         <!-- Residential -->
                         <div id="opt-residential" data-group="sub-opt" hidden data-ref="opt-residential">
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Apartment">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Apartment">
                                 <span data-lang="sub_opt_res_apt">아파트</span></label>
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="House">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="House">
                                 <span data-lang="sub_opt_res_house">주택</span></label>
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Villa">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Villa">
                                 <span data-lang="sub_opt_res_villa">빌라</span></label>
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
                                 <span data-lang="sub_opt_res_other">기타 주거</span></label>
                         </div>
                         <!-- Commercial -->
                         <div id="opt-commercial" data-group="sub-opt" hidden data-ref="opt-commercial">
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Office">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Office">
                                 <span data-lang="sub_opt_com_office">사무실</span></label>
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]"
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]"
                                     value="Cafe/Restaurant"> <span data-lang="sub_opt_com_cafe">카페/식당</span></label>
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Retail">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Retail">
                                 <span data-lang="sub_opt_com_retail">매장/상가</span></label>
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
                                 <span data-lang="sub_opt_com_other">기타 상업공간</span></label>
                         </div>
                         <!-- Woodhouse -->
                         <div id="opt-woodhouse" data-group="sub-opt" hidden data-ref="opt-woodhouse">
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="New Build">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="New Build">
                                 <span data-lang="sub_opt_wood_new">신축</span></label>
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Extension">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Extension">
                                 <span data-lang="sub_opt_wood_ext">증축/리모델링</span></label>
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
                                 <span data-lang="sub_opt_wood_other">기타 목조</span></label>
                         </div>
                         <!-- Partial -->
                         <div id="opt-partial" data-group="sub-opt" hidden data-ref="opt-partial">
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Kitchen">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Kitchen">
                                 <span data-lang="sub_opt_part_kitchen">주방</span></label>
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Bathroom">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Bathroom">
                                 <span data-lang="sub_opt_part_bath">욕실</span></label>
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Living Room">
-                                <span data-lang="sub_opt_part_living">거실/방</span></label>
-                            <label class="pv-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]"
+                                    value="Living Room"> <span data-lang="sub_opt_part_living">거실/방</span></label>
+                            <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
                                 <span data-lang="sub_opt_part_other">기타 부분</span></label>
                         </div>
                     </div>
 
                     <!-- Size Calculation -->
-                    <div class="pv-group">
-                        <label class="pv-label" data-lang="label_size">면적</label>
-                        <div class="pv-input-group request-area-group">
-                            <input type="number" id="size_input" name="size" class="pv-input" placeholder="0"
+                    <div class="damso-group">
+                        <label class="damso-label" data-lang="label_size">면적</label>
+                        <div class="damso-input-group request-area-group">
+                            <input type="number" id="size_input" name="size" class="damso-input" placeholder="0"
                                 data-ref="size_input">
-                            <select id="size_unit" name="size_unit" class="pv-select" data-ref="size_unit">
+                            <select id="size_unit" name="size_unit" class="damso-select" data-ref="size_unit">
                                 <option value="py" data-lang="opt_area_py">평수</option>
                                 <option value="m2" data-lang="opt_area_m2">제곱미터</option>
                             </select>
                         </div>
-                        <p class="pv-text-caption" style="margin-top: 6px;">
+                        <p class="damso-text-caption" style="margin-top: 6px;">
                             <span data-lang="text_calc_result">환산 면적:</span> <span id="calc_val"
                                 data-ref="calc_val">-</span>
                         </p>
                     </div>
 
                     <!-- Budget -->
-                    <div class="pv-group">
-                        <label class="pv-label">
+                    <div class="damso-group">
+                        <label class="damso-label">
                             <span data-lang="label_budget">예산</span>
-                            <span class="pv-text-caption" style="float:right;">원(KRW)</span>
+                            <span class="damso-text-caption" style="float:right;">원(KRW)</span>
                         </label>
-                        <input type="text" id="budget" name="budget" class="pv-input" placeholder="0" data-ref="budget">
+                        <input type="text" id="budget" name="budget" class="damso-input" placeholder="0"
+                            data-ref="budget">
                     </div>
 
                     <!-- Message -->
-                    <div class="pv-group">
-                        <label class="pv-label" data-lang="label_message">문의</label>
-                        <textarea name="message" class="pv-textarea" rows="5" placeholder=""></textarea>
+                    <div class="damso-group">
+                        <label class="damso-label" data-lang="label_message">문의</label>
+                        <textarea name="message" class="damso-textarea" rows="5" placeholder=""></textarea>
                     </div>
                 </div>
 
-                <!-- 3. Additional Request (Separated) -->
-                <div class="pv-card">
-                    <div class="pv-card__header">
+                <!-- 3. Additional Request -->
+                <div class="damso-card">
+                    <div class="damso-card__header">
                         <h2 data-lang="label_add_req">추가 요청</h2>
                     </div>
-                    <div class="pv-group">
+                    <div class="damso-group">
                         <div style="display: flex; gap: 1rem;">
-                            <label class="pv-check-label">
-                                <input class="pv-check-input" type="checkbox" name="req_contact[]" value="Call">
+                            <label class="damso-check-label">
+                                <input class="damso-check-input" type="checkbox" name="req_contact[]" value="Call">
                                 <span data-lang="opt_req_call">통화 요청</span>
                             </label>
-                            <label class="pv-check-label">
-                                <input class="pv-check-input" type="checkbox" name="req_contact[]" value="Visit">
+                            <label class="damso-check-label">
+                                <input class="damso-check-input" type="checkbox" name="req_contact[]" value="Visit">
                                 <span data-lang="opt_req_visit">방문 요청</span>
                             </label>
                         </div>
@@ -210,28 +211,28 @@
                 </div>
 
                 <!-- Privacy Policy -->
-                <div class="pv-check-group">
-                    <label class="pv-check-label">
-                        <input class="pv-check-input" type="checkbox" name="privacy_agree" required>
+                <div class="damso-check-group">
+                    <label class="damso-check-label">
+                        <input class="damso-check-input" type="checkbox" name="privacy_agree" required>
                         <span data-lang="label_privacy_agree">개인정보 수집 및 이용에 동의합니다.</span>
                     </label>
                 </div>
 
                 <!-- Submit -->
-                <div class="pv-submit-area">
-                    <button type="submit" class="pv-btn pv-btn--submit pv-btn--full">
+                <div class="damso-submit-area">
+                    <button type="submit" class="damso-btn damso-btn--submit damso-btn--full">
                         <span translate="no" class="material-symbols-outlined">send</span>
                         <span data-lang="request_title">견적 문의 보내기</span>
                     </button>
                 </div>
             </form>
 
-            <footer class="pv-footer">
+            <footer class="damso-footer">
                 <p class="render-as-html" data-lang="ex_copyright_text"></p>
             </footer>
         </div>
     </div>
 
-
+</body>
 
 </html>
