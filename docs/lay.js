@@ -16,7 +16,7 @@ const siteConfig = {
         image_format: 'webp'
     },
     api: {
-        damso: false,
+        server: 'damso',
         turnstile: '0x4AAAAAACJQlCjpqGMqegcx'
     },
     buttons: [
