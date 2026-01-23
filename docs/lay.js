@@ -10,7 +10,7 @@ const siteConfig = {
         theme: true
     },
     api: {
-        damso: true,
+        server: 'damso',
         turnstile: '0x4AAAAAACJQlCjpqGMqegcx',
         redirect: '../'
     },
