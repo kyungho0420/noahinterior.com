@@ -27,8 +27,8 @@
     <script src="https://cdn.dam.so/_inc/ex/v4/view/page.js"></script>
 
     <!-- Damso Express V4 Plug: Canvas -->
-    <link rel="stylesheet" href="https://cdn.dam.so/_inc/ex/v4/plug/canvas/canvas.css">
-    <script src="https://cdn.dam.so/_inc/ex/v4/plug/canvas/canvas.js"></script>
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/ex/v4/plug/canvas.css">
+    <script src="https://cdn.dam.so/_inc/ex/v4/plug/canvas.js"></script>
 
     <link rel="stylesheet" href="./lay.css">
     <script src="./lay.js" defer></script>
@@ -41,11 +41,11 @@
         <div class="damso-nav__container">
             <a href="#home" class="damso-nav__logo">NOAH INTERIOR</a>
             <div class="damso-nav__buttons">
-                <div id="lang-switcher">
-                    <button data-lang-set="ko" class="active">KO</button>
-                    <button data-lang-set="en">EN</button>
-                    <button data-lang-set="vi">VI</button>
-                </div>
+                <nav id="lang-switcher" class="damso-lang-switcher">
+                    <button data-lang-set="ko" class="damso-lang-btn">KO</button>
+                    <button data-lang-set="en" class="damso-lang-btn">EN</button>
+                    <button data-lang-set="vi" class="damso-lang-btn">VI</button>
+                </nav>
             </div>
         </div>
     </nav>
@@ -205,8 +205,10 @@
     <footer class="damso-footer">
         <div class="damso-container">
             <p class="render-as-html" data-lang="ui_copyright_text"></p>
-            <p><a data-lang-href="ui_footer_credit_url" rel="noopener noreferrer"
-                    data-lang="ui_footer_credit_text">Powered by Damso</a></p>
+            <p>
+                <a data-lang-href="ui_footer_credit_url" rel="noopener noreferrer"
+                    data-lang="ui_footer_credit_text">Production by Maxim</a>
+            </p>
         </div>
     </footer>
 </body>

@@ -1,31 +1,145 @@
 /*
-    Theme: NOAH INTERIOR - Soft Wood Theme
+    Version: 4.6.0
+    Framework: Express Series V4
+    Theme: NOAH INTERIOR - Soft Wood & Matte Modern
+    Last Modified: 2026-04-10
 */
 
 :root {
-    /* [User Variables] - Soft Brown Palette (Mapped to Standard Vars) */
-    --damso-color-primary: #795548;
-    /* Material Brown 500 */
-    --damso-color-secondary: #A1887F;
-    /* Material Brown 300 */
-    --damso-color-accent: #8D6E63;
-    /* Warm Brown */
-    --damso-color-bg: #FCFBF8;
-    --damso-color-surface: #F4F1EC;
-    --damso-color-text: #4E342E;
-    /* Dark Brown Text */
+    /* --- Soft Wood Palette (Matte Look) --- */
+    --damso-color-primary: #795548;      /* Material Brown 500 */
+    --damso-color-secondary: #A1887F;    /* Material Brown 300 */
+    --damso-color-bg: #FCFBF8;           /* Paper White */
+    --damso-color-surface: #F4F1EC;      /* Soft Oatmeal */
+    --damso-color-border: rgba(0, 0, 0, 0.04); /* Ultra Subtle Border */
+    --damso-color-text: #4E342E;         /* Coffee Brown */
+    --damso-color-text-weak: #8D6E63;
+    --damso-color-accent: #D7CCC8;       /* Beige Accent */
 
-    /* Button Colors */
     --damso-bg-button: var(--damso-color-primary);
-    --damso-text-button: #FFFFFF;
+    --damso-bg-button-hover: var(--damso-color-secondary);
+    --damso-card-border: transparent;    /* Removed border for Matte design */
+    --damso-nav-bg-gradient: linear-gradient(135deg, rgba(252, 251, 248, 0.95), rgba(244, 241, 236, 0.95));
 }
 
+[data-theme="dark"] {
+    /* --- Dark Mahogany Look --- */
+    --damso-color-primary: #D7CCC8;
+    --damso-color-secondary: #BCAAA4;
+    --damso-color-bg: #211A18;           /* Deep Espresso */
+    --damso-color-surface: #2D2421;      /* Dark Wood */
+    --damso-color-border: rgba(255, 255, 255, 0.08);
+    --damso-color-text: #EFEBE9;
+    --damso-color-text-weak: #BCAAA4;
+    --damso-color-accent: #795548;
 
+    --damso-bg-button: var(--damso-color-primary);
+    --damso-nav-bg-gradient: linear-gradient(135deg, #211A18, #2D2421);
+}
+
+body {
+    font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    background-color: var(--damso-color-bg);
+}
+
+/* Typography Consistency */
+.logo-font,
+.damso-nav__logo,
+.damso-header__title {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -1px;
+}
 
 .damso-header__title {
     font-weight: 300;
 }
 
 .damso-header__title strong {
-    font-weight: 900;
+    font-weight: 800;
+    color: var(--damso-color-primary);
 }
+
+/* Global Readability Overrides */
+h1, h2, h3, h4, h5, h6,
+.damso-section__title,
+.damso-card__title,
+.damso-card__description,
+.damso-process-item__title,
+.damso-faq__title,
+.damso-faq__content {
+    color: var(--damso-color-text) !important;
+}
+
+/* Matte Sectioning */
+.damso-section--secondary {
+    background-color: var(--damso-color-surface) !important;
+}
+
+/* Remove excessive borders from Cards */
+.damso-card {
+    border: none !important;
+    background-color: var(--damso-color-surface);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.damso-section--secondary .damso-card {
+    background-color: var(--damso-color-bg);
+}
+
+.damso-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Language Switcher (Capsule Style) */
+.damso-lang-btn {
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--damso-color-text-weak);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.damso-lang-btn.active {
+    background-color: var(--damso-color-primary);
+    color: var(--damso-color-bg) !important;
+    box-shadow: 0 4px 12px rgba(121, 85, 72, 0.2);
+}
+
+[data-theme="dark"] .damso-lang-btn.active {
+    color: var(--damso-color-bg) !important;
+}
+
+.damso-lang-btn:hover:not(.active) {
+    color: var(--damso-color-primary);
+    background: rgba(121, 85, 72, 0.05);
+}
+
+/* Profile List Styling */
+.damso-profile-list__item {
+    border-bottom: 1px solid var(--damso-color-border) !important;
+    padding: 12px 0;
+}
+
+/* Buttons */
+.damso-btn {
+    border-radius: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Footer Links */
+.damso-footer a {
+    color: var(--damso-color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}

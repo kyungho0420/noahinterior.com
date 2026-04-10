@@ -1,31 +1,32 @@
-/**
- * Noah Interior Request
- */
+/*
+    Noah Interior - Request Configuration
+    Version: 4.6.0
+*/
+
 const siteConfig = {
     meta: {
         framework: 'V4',
         type: 'form',
-        mode: 'demo',
+        mode: 'live',
         lang: 'ko',
-        theme: false
+        theme: 'auto'
     },
     api: {
         server: 'damso',
         turnstile: '0x4AAAAAACJQlCjpqGMqegcx',
-        redirect: '../'
-    },
-    allowed_extensions: ['jpg', 'png', 'pdf', 'zip']
+        redirect: './'
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
     if (window.V4) {
         window.V4.init(siteConfig).then(() => {
-            initCustomLogic();
+            initFormLogic();
         });
     }
 });
 
-function initCustomLogic() {
+function initFormLogic() {
     // 1. Dynamic Sub-Options
     const typeSelect = document.querySelector('[data-ref="construction_type"]');
     const subOptContainer = document.querySelector('[data-ref="sub-options-container"]');
@@ -52,7 +53,7 @@ function initCustomLogic() {
         updateSubOptions();
     }
 
-    // 2. Area Calculation
+    // 2. Area Calculation (Py <=> M2)
     const sizeInput = document.querySelector('[data-ref="size_input"]');
     const sizeUnitSelect = document.querySelector('[data-ref="size_unit"]');
     const calcValSpan = document.querySelector('[data-ref="calc_val"]');
@@ -78,25 +79,23 @@ function initCustomLogic() {
     };
 
     if (sizeInput && sizeUnitSelect) {
-        sizeInput.addEventListener('input', updateAreaCalc);
-        sizeInput.addEventListener('keyup', updateAreaCalc);
-        sizeUnitSelect.addEventListener('change', updateAreaCalc);
+        ['input', 'change', 'keyup'].forEach(ev => {
+            sizeInput.addEventListener(ev, updateAreaCalc);
+            sizeUnitSelect.addEventListener(ev, updateAreaCalc);
+        });
     }
 
-    // 3. Budget Formatting
+    // 3. Budget Formatting (Comma)
     const budgetInput = document.querySelector('[data-ref="budget"]');
     if (budgetInput) {
         budgetInput.addEventListener('input', (e) => {
-            let val = e.target.value;
-            val = val.replace(/[^0-9]/g, '');
-
+            let val = e.target.value.replace(/[^0-9]/g, '');
             if (!val) {
                 e.target.value = '';
                 return;
             }
-
-            const num = parseInt(val, 10);
-            e.target.value = num.toLocaleString();
+            e.target.value = parseInt(val, 10).toLocaleString();
         });
     }
 }
+

@@ -1,16 +1,139 @@
-/* Layout Overrides for Request Page */
+/*
+    Project: NOAH INTERIOR Request
+    Theme: Soft Wood & Matte Modern
+    Framework: Damso V4 Form
+    Last Modified: 2026-04-10
+*/
+
+:root {
+    /* --- Soft Wood Palette (Main Site Sync) --- */
+    --damso-color-primary: #795548;
+    --damso-color-secondary: #A1887F;
+    --damso-color-bg: #FCFBF8;
+    --damso-color-surface: #F4F1EC;
+    --damso-color-border: rgba(121, 85, 72, 0.1);
+    --damso-color-text: #4E342E;
+    --damso-color-text-weak: #8D6E63;
+    --damso-color-accent: #795548;
+
+    --damso-bg-button: var(--damso-color-primary);
+    --damso-bg-button-hover: var(--damso-color-secondary);
+    --damso-card-border: transparent;
+}
+
+[data-theme="dark"] {
+    --damso-color-primary: #D7CCC8;
+    --damso-color-secondary: #BCAAA4;
+    --damso-color-bg: #211A18;
+    --damso-color-surface: #2D2421;
+    --damso-color-border: rgba(255, 255, 255, 0.1);
+    --damso-color-text: #EFEBE9;
+    --damso-color-text-weak: #BCAAA4;
+    --damso-color-accent: #D7CCC8;
+
+    --damso-bg-button: var(--damso-color-primary);
+}
+
+body {
+    font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+    background-color: var(--damso-color-bg);
+    color: var(--damso-color-text);
+}
+
+/* Header Styling */
+.damso-header {
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.damso-header__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 8px;
+    color: var(--damso-color-primary);
+}
+
+.damso-header__description {
+    color: var(--damso-color-text-weak);
+    font-size: 1.1rem;
+}
+
+/* Matte Card Styles */
+.damso-card {
+    background-color: var(--damso-color-surface);
+    border: none !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.damso-card__header h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--damso-color-primary);
+}
+
+.damso-card__badge {
+    background: var(--damso-color-bg);
+    color: var(--damso-color-primary);
+    border: 1px solid var(--damso-color-border);
+}
+
+/* Form Elements */
+.damso-input,
+.damso-select,
+.damso-textarea {
+    background-color: var(--damso-color-bg);
+    border: 1px solid var(--damso-color-border);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.damso-input:focus,
+.damso-select:focus,
+.damso-textarea:focus {
+    border-color: var(--damso-color-primary);
+    box-shadow: 0 0 0 3px rgba(121, 85, 72, 0.1);
+}
+
+/* Language Switcher (Standardized) */
+.damso-lang-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.damso-lang-btn {
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--damso-color-text-weak);
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.damso-lang-btn.active {
+    background: var(--damso-color-primary);
+    color: var(--damso-color-bg) !important;
+}
+
+/* Layout Helpers */
 .request-area-group {
     display: flex;
-    gap: 8px;
-    align-items: center;
+    gap: 10px;
+    align-items: flex-end;
 }
 
-.request-area-group .damso-input {
-    flex: 1;
-}
+.request-area-group > div:first-child { flex: 1; }
+.request-area-group > div:last-child { width: 120px; }
 
-.request-area-group .damso-select {
-    width: 150px;
-    flex: 0 0 150px;
-    /* Fixed 150px width */
-}
+/* Inverted Text for Primary Buttons in Dark Mode */
+[data-theme="dark"] .damso-btn--submit {
+    color: #211A18 !important;
+}
