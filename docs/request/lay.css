@@ -148,7 +148,56 @@ body {
     font-size: 0.85rem;
 }
 
-/* Inverted Text for Primary Buttons in Dark Mode */
-[data-theme="dark"] .damso-btn--submit {
-    color: #211A18 !important;
+/* Form Elements Overrides */
+.damso-check-input:checked {
+    background-color: var(--damso-color-primary) !important;
+    border-color: var(--damso-color-primary) !important;
+}
+
+[data-theme="dark"] .damso-check-input:checked {
+    /* Use a darker brown in dark mode to make the white checkmark icon pop */
+    background-color: #795548 !important;
+    border-color: #795548 !important;
+}
+
+/* Home Link (Andar Style Capsule) */
+.site-home-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--damso-color-text);
+    font-size: 0.85rem;
+    font-weight: 700;
+    z-index: 1000;
+    background: var(--damso-color-surface);
+    padding: 10px 22px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--damso-color-border);
+}
+
+[data-theme="dark"] .site-home-link {
+    background: var(--damso-color-surface);
+    color: var(--damso-color-primary);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.site-home-link:hover {
+    transform: translateY(-2px);
+    color: var(--damso-color-primary);
+    background: var(--damso-color-bg);
+}
+
+@media (max-width: 768px) {
+    .site-home-link {
+        top: 10px;
+        right: 10px;
+        padding: 6px 14px;
+        font-size: 0.75rem;
+    }
 }
