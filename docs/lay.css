@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* Footer Styling */
 .damso-footer {
-    background-color: #211A18 !important; /* Force Dark Footer */
+    background-color: var(--damso-footer-bg);
     color: #BCAAA4 !important;
     padding: 40px 0;
 }
@@ -154,4 +154,4 @@ h1, h2, h3, h4, h5, h6,
 
 .damso-footer .render-as-html {
     color: #EFEBE9 !important;
-}
+}
