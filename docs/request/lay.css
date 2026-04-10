@@ -133,6 +133,21 @@ body {
 .request-area-group > div:first-child { flex: 1; }
 .request-area-group > div:last-child { width: 120px; }
 
+/* Footer Styling */
+.damso-footer {
+    background-color: #211A18 !important;
+    color: #BCAAA4 !important;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    margin-top: 40px;
+}
+
+.damso-footer .render-as-html {
+    color: #EFEBE9 !important;
+    font-size: 0.85rem;
+}
+
 /* Inverted Text for Primary Buttons in Dark Mode */
 [data-theme="dark"] .damso-btn--submit {
     color: #211A18 !important;
