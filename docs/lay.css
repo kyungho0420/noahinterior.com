@@ -53,13 +53,13 @@ body {
 
 .damso-header__title,
 .damso-header__description {
-    color: #FFFFFF !important;
+    color: var(--damso-color-bg) !important;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .damso-header__title strong {
     font-weight: 800;
-    color: #FFFFFF !important;
+    color: var(--damso-color-bg) !important;
 }
 
 /* Global Readability Overrides */
@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6,
 .damso-card {
     border: none !important;
     background-color: var(--damso-color-surface);
-    border-radius: 8px;
+    border-radius: var(--damso-radius);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
     transition: all 0.3s ease;
 }
@@ -97,6 +97,14 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Language Switcher (Capsule Style) */
+.damso-lang-switcher {
+    display: inline-flex;
+    padding: 4px;
+    background: var(--damso-color-surface);
+    border: 1px solid var(--damso-color-border);
+    border-radius: 50px;
+}
+
 .damso-lang-btn {
     padding: 6px 16px;
     border-radius: 50px;
