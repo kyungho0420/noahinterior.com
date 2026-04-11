@@ -53,8 +53,7 @@ body {
 
 .damso-header__title,
 .damso-header__description {
-    color: var(--damso-color-text); /* Use dark coffee brown instead of off-white */
-    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.5); /* Light shadow for readability on images */
+    color: #FFF;
 }
 
 .damso-header__title strong {
@@ -70,17 +69,17 @@ h1, h2, h3, h4, h5, h6,
 .damso-process-item__title,
 .damso-faq__title,
 .damso-faq__content {
-    color: var(--damso-color-text) !important;
+    color: var(--damso-color-text);
 }
 
 /* Matte Sectioning */
 .damso-section--secondary {
-    background-color: var(--damso-color-surface) !important;
+    background-color: var(--damso-color-surface);
 }
 
 /* Remove excessive borders from Cards */
 .damso-card {
-    border: none !important;
+    border: none;
     background-color: var(--damso-color-surface);
     border-radius: var(--damso-radius);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
@@ -120,12 +119,12 @@ h1, h2, h3, h4, h5, h6,
 
 .damso-lang-btn.active {
     background-color: var(--damso-color-primary);
-    color: var(--damso-color-bg) !important;
+    color: var(--damso-color-bg);
     box-shadow: 0 4px 12px rgba(121, 85, 72, 0.2);
 }
 
 [data-theme="dark"] .damso-lang-btn.active {
-    color: var(--damso-color-bg) !important;
+    color: var(--damso-color-bg);
 }
 
 .damso-lang-btn:hover:not(.active) {
@@ -135,7 +134,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* Profile List Styling */
 .damso-profile-list__item {
-    border-bottom: 1px solid var(--damso-color-border) !important;
+    border-bottom: 1px solid var(--damso-color-border);
     padding: 12px 0;
 }
 
@@ -150,16 +149,16 @@ h1, h2, h3, h4, h5, h6,
 /* Footer Styling */
 .damso-footer {
     background-color: var(--damso-footer-bg);
-    color: #BCAAA4 !important;
+    color: #BCAAA4;
     padding: 40px 0;
 }
 
 .damso-footer a {
-    color: #FFFFFF !important;
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: 600;
 }
 
 .damso-footer .render-as-html {
-    color: #EFEBE9 !important;
+    color: #EFEBE9;
 }
