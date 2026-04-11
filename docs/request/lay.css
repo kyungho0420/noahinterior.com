@@ -158,16 +158,6 @@ body {
     margin-top: 40px;
 }
 
-[data-theme="dark"] .damso-footer {
-    background-color: #000000;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.damso-footer .render-as-html {
-    color: var(--damso-color-text-weak) !important;
-    font-size: 0.85rem;
-}
-
 /* Form Elements Overrides */
 .damso-check-input:checked {
     background-color: var(--damso-color-primary) !important;
@@ -219,4 +209,4 @@ body {
         padding: 6px 14px;
         font-size: 0.75rem;
     }
-}
+}
