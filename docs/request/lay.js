@@ -14,7 +14,7 @@ const siteConfig = {
     api: {
         server: 'damso',
         turnstile: '0x4AAAAAACJQlCjpqGMqegcx',
-        redirect: './'
+        redirect: '../'
     }
 };
 
