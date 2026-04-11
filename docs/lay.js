@@ -13,7 +13,6 @@ const siteConfig = {
     },
     api: {
         server: 'damso',
-        turnstile: '0x4AAAAAACJQlCjpqGMqegcx',
         redirect: './'
     },
     canvas: {
@@ -40,4 +39,4 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Noah Interior V4 Ready');
         });
     }
-});
+});
