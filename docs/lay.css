@@ -51,16 +51,6 @@ body {
     letter-spacing: -1px;
 }
 
-.damso-header__title,
-.damso-header__description {
-    color: #FFF;
-}
-
-.damso-header__title strong {
-    font-weight: 800;
-    color: var(--damso-color-primary);
-}
-
 /* Global Readability Overrides */
 h1, h2, h3, h4, h5, h6,
 .damso-section__title,
