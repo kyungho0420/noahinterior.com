@@ -152,14 +152,14 @@
             </div>
         </section>
 
-        <!-- 5. Contact -->
-        <section id="contact" class="damso-section damso-section--secondary js-fade-in">
+        <!-- 5. Profile -->
+        <section id="profile" class="damso-section damso-section--secondary js-fade-in">
             <div class="damso-container">
-                <h2 class="damso-section__title" data-lang="office_title">
+                <h2 class="damso-section__title">
                     <span translate="no" class="material-symbols-outlined notranslate">contact_mail</span>
-                    Contact
+                    <span data-lang="section_profile_title">Profile</span>
                 </h2>
-                <p class="damso-section__description" data-lang="office_desc"></p>
+                <p class="damso-section__description" data-lang="section_profile_desc"></p>
 
                 <div class="damso-profile-list">
                     <div class="damso-profile-list__item">
@@ -172,11 +172,37 @@
                     </div>
                 </div>
 
-                <div class="damso-contact-button-wrapper">
+                <div class="damso-button-group">
                     <a href="./request" class="damso-btn">
                         <span data-lang="btn_request_quote">견적요청</span>
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact -->
+        <section id="contact" class="damso-section js-fade-in">
+            <div class="damso-container">
+                <h2 class="damso-section__title">
+                    <span translate="no" class="material-symbols-outlined notranslate">mail</span>
+                    <span data-lang="section_contact_title">Contact</span>
+                </h2>
+                <p class="damso-section__description" data-lang="section_contact_desc"></p>
+
+                <form class="damso-form damso-contact-form" autocomplete="off" data-demo-mode="true">
+                    <input type="text" name="name" required class="damso-form__input"
+                        data-lang-placeholder="form_placeholder_name" placeholder="Name">
+                    <input type="email" name="email" required class="damso-form__input"
+                        data-lang-placeholder="form_placeholder_email" placeholder="Email">
+                    <div class="damso-form__textarea-wrapper">
+                        <textarea name="message" rows="5" required maxlength="5000" class="damso-form__textarea"
+                            data-lang-placeholder="form_placeholder_msg" placeholder="Message"></textarea>
+                    </div>
+                    <input type="hidden" name="form" value="noahinterior">
+                    <button type="submit" class="damso-btn">
+                        <span class="damso-form__text" data-lang="btn_submit">보내기</span>
+                    </button>
+                </form>
             </div>
         </section>
 
@@ -192,7 +218,7 @@
                 <form class="damso-form damso-search-form" autocomplete="off" data-demo-mode="true">
                     <input type="text" name="key" required class="damso-form__input"
                         data-lang-placeholder="form_placeholder_search" placeholder="Search...">
-                    <input type="hidden" name="form" value="andar">
+                    <input type="hidden" name="form" value="noahinterior">
                     <button type="submit" class="damso-btn">
                         <span class="damso-form__text" data-lang="btn_search">검색</span>
                     </button>
