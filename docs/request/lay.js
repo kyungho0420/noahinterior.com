@@ -12,7 +12,7 @@ const siteConfig = {
         theme: 'auto'
     },
     api: {
-        server: 'damso',
+        server: 'provider',
         redirect: '../'
     }
 };
