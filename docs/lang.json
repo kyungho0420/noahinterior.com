@@ -1,8 +1,7 @@
 {
   "_default": {
     "address_text": "전라북도 전주시 완산구 평화동1가 589-21",
-    "name_text": "김영진",
-    "ui_footer_credit_url": "https://www.provider.co.kr"
+    "name_text": "김영진"
   },
   "en": {
     "home_description": "Free On-site Consultation in Jeonju & Jeollabuk-do",
@@ -25,8 +24,6 @@
     "services_desc": "We provide professional woodworking services tailored to your space.",
     "services_title": "Services",
     "btn_request_quote": "Request Quote",
-    "ui_copyright_text": "&copy; 2026 NOAH INTERIOR. All Rights Reserved.",
-    "ui_footer_credit_text": "Production by Maxim",
     "request_title": "NOAH INTERIOR",
     "request_subtitle": "Interior Free Quote Consultation",
     "request_section_info": "Information",
@@ -78,8 +75,6 @@
     "services_desc": "고객님의 공간에 맞춘 전문적인 목공 서비스를 제공합니다.",
     "services_title": "주요 사업",
     "btn_request_quote": "견적 요청하기",
-    "ui_copyright_text": "&copy; 2026 NOAH INTERIOR. All Rights Reserved.",
-    "ui_footer_credit_text": "Production by Maxim",
     "request_title": "노아인테리어",
     "request_subtitle": "인테리어 무료 견적 상담",
     "request_section_info": "기본 정보",
@@ -139,8 +134,6 @@
     "btn_search": "Tìm kiếm",
     "btn_request_quote": "Yêu cầu báo giá",
     "btn_submit": "Gửi yêu cầu",
-    "ui_copyright_text": "&copy; 2026 NOAH INTERIOR. All Rights Reserved.",
-    "ui_footer_credit_text": "Production by Maxim",
     "request_title": "NOAH INTERIOR",
     "request_subtitle": "Tư vấn báo giá nội thất miễn phí",
     "request_section_info": "Thông tin cơ bản",
