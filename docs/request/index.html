@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="meta_title">노아인테리어 - 인테리어 무료 견적 상담</title>
-    <meta name="description" data-lang="meta_description" content="주택 및 상업 공간 인테리어부터 부분 시공까지 무료 견적 상담을 제공합니다.">
+    <title data-i18n="meta_title">노아인테리어 - 인테리어 무료 견적 상담</title>
+    <meta name="description" data-i18n="meta_description" content="주택 및 상업 공간 인테리어부터 부분 시공까지 무료 견적 상담을 제공합니다.">
 
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
@@ -32,8 +32,8 @@
     <div class="damso-app">
         <div class="damso-container">
             <header class="damso-header">
-                <h1 class="damso-header__title" data-lang="request_title">노아인테리어</h1>
-                <p class="damso-header__description" data-lang="request_subtitle">인테리어 무료 견적 상담</p>
+                <h1 class="damso-header__title" data-i18n="request_title">노아인테리어</h1>
+                <p class="damso-header__description" data-i18n="request_subtitle">인테리어 무료 견적 상담</p>
 
                 <nav id="lang-switcher" class="damso-lang-switcher">
                     <a href="?lang=ko" class="damso-lang-btn">KO</a>
@@ -48,33 +48,33 @@
                 <!-- 1. Customer Info -->
                 <div class="damso-card">
                     <div class="damso-card__header">
-                        <h2 data-lang="request_section_info">기본 정보</h2>
+                        <h2 data-i18n="request_section_info">기본 정보</h2>
                         <span class="damso-card__badge">Profile</span>
                     </div>
 
                     <!-- Client Type -->
                     <div class="damso-group">
-                        <label class="damso-label" data-lang="label_client_type">고객 유형</label>
+                        <label class="damso-label" data-i18n="label_client_type">고객 유형</label>
                         <select name="client_type" class="damso-select" required>
-                            <option value="Individual" data-lang="opt_client_individual">개인</option>
-                            <option value="Group" data-lang="opt_client_group">단체</option>
-                            <option value="Corporate" data-lang="opt_client_corporate">회사</option>
+                            <option value="Individual" data-i18n="opt_client_individual">개인</option>
+                            <option value="Group" data-i18n="opt_client_group">단체</option>
+                            <option value="Corporate" data-i18n="opt_client_corporate">회사</option>
                         </select>
                     </div>
 
                     <div class="damso-grid damso-grid--cols-3">
                         <div class="damso-group">
-                            <label for="name" class="damso-label" data-lang="office_label_name">Name</label>
+                            <label for="name" class="damso-label" data-i18n="office_label_name">Name</label>
                             <input type="text" id="name" name="name" required class="damso-input"
-                                data-lang-placeholder="ph_name">
+                                data-i18n-placeholder="ph_name">
                         </div>
                         <div class="damso-group">
-                            <label for="phone" class="damso-label" data-lang="office_label_phone">Phone</label>
+                            <label for="phone" class="damso-label" data-i18n="office_label_phone">Phone</label>
                             <input type="tel" id="phone" name="phone" required class="damso-input"
                                 placeholder="010-0000-0000">
                         </div>
                         <div class="damso-group">
-                            <label for="email" class="damso-label" data-lang="office_label_email">Email</label>
+                            <label for="email" class="damso-label" data-i18n="office_label_email">Email</label>
                             <input type="email" id="email" name="email" required class="damso-input"
                                 placeholder="example@email.com">
                         </div>
@@ -84,27 +84,27 @@
                 <!-- 2. Construction Details -->
                 <div class="damso-card">
                     <div class="damso-card__header">
-                        <h2 data-lang="request_section_details">시공 내용</h2>
+                        <h2 data-i18n="request_section_details">시공 내용</h2>
                         <span class="damso-card__badge">Details</span>
                     </div>
 
                     <!-- Address -->
                     <div class="damso-group">
-                        <label for="address" class="damso-label" data-lang="location_label_address">Address</label>
+                        <label for="address" class="damso-label" data-i18n="location_label_address">Address</label>
                         <input type="text" id="address" name="address" class="damso-input"
-                            data-lang-placeholder="ph_address">
+                            data-i18n-placeholder="ph_address">
                     </div>
 
                     <!-- Type Selection -->
                     <div class="damso-group">
-                        <label class="damso-label" data-lang="label_construction_type">시공 유형</label>
+                        <label class="damso-label" data-i18n="label_construction_type">시공 유형</label>
                         <select name="construction_type" id="construction_type" class="damso-select" required
                             data-ref="construction_type">
-                            <option value="" data-lang="label_construction_type">선택해주세요</option>
-                            <option value="residential" data-lang="opt_type_residential">주택</option>
-                            <option value="commercial" data-lang="opt_type_commercial">상업</option>
-                            <option value="woodhouse" data-lang="opt_type_woodhouse">목조</option>
-                            <option value="partial" data-lang="opt_type_partial">부분</option>
+                            <option value="" data-i18n="label_construction_type">선택해주세요</option>
+                            <option value="residential" data-i18n="opt_type_residential">주택</option>
+                            <option value="commercial" data-i18n="opt_type_commercial">상업</option>
+                            <option value="woodhouse" data-i18n="opt_type_woodhouse">목조</option>
+                            <option value="partial" data-i18n="opt_type_partial">부분</option>
                         </select>
                     </div>
 
@@ -114,60 +114,60 @@
                         <!-- Residential -->
                         <div id="opt-residential" data-group="sub-opt" hidden data-ref="opt-residential">
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Apartment">
-                                <span data-lang="sub_opt_res_apt">아파트</span></label>
+                                <span data-i18n="sub_opt_res_apt">아파트</span></label>
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="House">
-                                <span data-lang="sub_opt_res_house">주택</span></label>
+                                <span data-i18n="sub_opt_res_house">주택</span></label>
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Villa">
-                                <span data-lang="sub_opt_res_villa">빌라</span></label>
+                                <span data-i18n="sub_opt_res_villa">빌라</span></label>
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
-                                <span data-lang="sub_opt_res_other">기타 주거</span></label>
+                                <span data-i18n="sub_opt_res_other">기타 주거</span></label>
                         </div>
                         <!-- Commercial -->
                         <div id="opt-commercial" data-group="sub-opt" hidden data-ref="opt-commercial">
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Office">
-                                <span data-lang="sub_opt_com_office">사무실</span></label>
+                                <span data-i18n="sub_opt_com_office">사무실</span></label>
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]"
-                                    value="Cafe/Restaurant"> <span data-lang="sub_opt_com_cafe">카페/식당</span></label>
+                                    value="Cafe/Restaurant"> <span data-i18n="sub_opt_com_cafe">카페/식당</span></label>
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Retail">
-                                <span data-lang="sub_opt_com_retail">매장/상가</span></label>
+                                <span data-i18n="sub_opt_com_retail">매장/상가</span></label>
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
-                                <span data-lang="sub_opt_com_other">기타 상업공간</span></label>
+                                <span data-i18n="sub_opt_com_other">기타 상업공간</span></label>
                         </div>
                         <!-- Woodhouse -->
                         <div id="opt-woodhouse" data-group="sub-opt" hidden data-ref="opt-woodhouse">
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="New Build">
-                                <span data-lang="sub_opt_wood_new">신축</span></label>
+                                <span data-i18n="sub_opt_wood_new">신축</span></label>
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Extension">
-                                <span data-lang="sub_opt_wood_ext">증축/리모델링</span></label>
+                                <span data-i18n="sub_opt_wood_ext">증축/리모델링</span></label>
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
-                                <span data-lang="sub_opt_wood_other">기타 목조</span></label>
+                                <span data-i18n="sub_opt_wood_other">기타 목조</span></label>
                         </div>
                         <!-- Partial -->
                         <div id="opt-partial" data-group="sub-opt" hidden data-ref="opt-partial">
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Kitchen">
-                                <span data-lang="sub_opt_part_kitchen">주방</span></label>
+                                <span data-i18n="sub_opt_part_kitchen">주방</span></label>
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Bathroom">
-                                <span data-lang="sub_opt_part_bath">욕실</span></label>
+                                <span data-i18n="sub_opt_part_bath">욕실</span></label>
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]"
-                                    value="Living Room"> <span data-lang="sub_opt_part_living">거실/방</span></label>
+                                    value="Living Room"> <span data-i18n="sub_opt_part_living">거실/방</span></label>
                             <label class="damso-check-label"><input type="checkbox" name="sub_opt[]" value="Other">
-                                <span data-lang="sub_opt_part_other">기타 부분</span></label>
+                                <span data-i18n="sub_opt_part_other">기타 부분</span></label>
                         </div>
                     </div>
 
                     <!-- Size Calculation -->
                     <div class="damso-group">
-                        <label class="damso-label" data-lang="label_size">면적</label>
+                        <label class="damso-label" data-i18n="label_size">면적</label>
                         <div class="damso-input-group request-area-group">
                             <input type="number" id="size_input" name="size" class="damso-input" placeholder="0"
                                 data-ref="size_input">
                             <select id="size_unit" name="size_unit" class="damso-select" data-ref="size_unit">
-                                <option value="py" data-lang="opt_area_py">평수</option>
-                                <option value="m2" data-lang="opt_area_m2">제곱미터</option>
+                                <option value="py" data-i18n="opt_area_py">평수</option>
+                                <option value="m2" data-i18n="opt_area_m2">제곱미터</option>
                             </select>
                         </div>
                         <p class="damso-text-caption" style="margin-top: 6px;">
-                            <span data-lang="text_calc_result">환산 면적:</span> <span id="calc_val"
+                            <span data-i18n="text_calc_result">환산 면적:</span> <span id="calc_val"
                                 data-ref="calc_val">-</span>
                         </p>
                     </div>
@@ -175,7 +175,7 @@
                     <!-- Budget -->
                     <div class="damso-group">
                         <label class="damso-label">
-                            <span data-lang="label_budget">예산</span>
+                            <span data-i18n="label_budget">예산</span>
                             <span class="damso-text-caption" style="float:right;">원(KRW)</span>
                         </label>
                         <input type="text" id="budget" name="budget" class="damso-input" placeholder="0"
@@ -184,7 +184,7 @@
 
                     <!-- Message -->
                     <div class="damso-group">
-                        <label class="damso-label" data-lang="label_message">문의</label>
+                        <label class="damso-label" data-i18n="label_message">문의</label>
                         <textarea name="message" class="damso-textarea" rows="5" placeholder=""></textarea>
                     </div>
                 </div>
@@ -192,17 +192,17 @@
                 <!-- 3. Additional Request -->
                 <div class="damso-card">
                     <div class="damso-card__header">
-                        <h2 data-lang="label_add_req">추가 요청</h2>
+                        <h2 data-i18n="label_add_req">추가 요청</h2>
                     </div>
                     <div class="damso-group">
                         <div style="display: flex; gap: 1rem;">
                             <label class="damso-check-label">
                                 <input class="damso-check-input" type="checkbox" name="req_contact[]" value="Call">
-                                <span data-lang="opt_req_call">통화 요청</span>
+                                <span data-i18n="opt_req_call">통화 요청</span>
                             </label>
                             <label class="damso-check-label">
                                 <input class="damso-check-input" type="checkbox" name="req_contact[]" value="Visit">
-                                <span data-lang="opt_req_visit">방문 요청</span>
+                                <span data-i18n="opt_req_visit">방문 요청</span>
                             </label>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
                 <div class="damso-check-group">
                     <label class="damso-check-label">
                         <input class="damso-check-input" type="checkbox" name="privacy_agree" required>
-                        <span data-lang="label_privacy_agree">개인정보 수집 및 이용에 동의합니다.</span>
+                        <span data-i18n="label_privacy_agree">개인정보 수집 및 이용에 동의합니다.</span>
                     </label>
                 </div>
 
@@ -220,7 +220,7 @@
                 <div class="damso-submit-area">
                     <button type="submit" class="damso-btn damso-btn--submit damso-btn--full">
                         <span translate="no" class="material-symbols-outlined">send</span>
-                        <span data-lang="btn_request_quote">견적 문의 보내기</span>
+                        <span data-i18n="btn_request_quote">견적 문의 보내기</span>
                     </button>
                 </div>
             </form>
