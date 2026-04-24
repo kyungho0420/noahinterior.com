@@ -27,7 +27,6 @@ const siteConfig = {
         image_format: 'webp'
     },
     buttons: [
-        { name: 'Overview', icon: 'home', url: '#home' },
         { name: 'Portfolio', icon: 'style', url: '#portfolio' },
         { name: 'Location', icon: 'location_on', url: '#location' },
         { name: 'Request', icon: 'edit_note', url: './request' }
