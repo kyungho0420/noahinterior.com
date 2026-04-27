@@ -1,154 +1,84 @@
 /*
-    Version: 4.6.0
-    Framework: Express Series V4
+    Version: V4.1.0
     Theme: NOAH INTERIOR - Soft Wood & Matte Modern
-    Last Modified: 2026-04-10
+    Last Modified: 2026-04-27
 */
 
 :root {
-    /* --- Soft Wood Palette (Matte Look) --- */
-    --damso-color-primary: #795548;      /* Material Brown 500 */
-    --damso-color-secondary: #A1887F;    /* Material Brown 300 */
-    --damso-color-bg: #FCFBF8;           /* Paper White */
-    --damso-color-surface: #F4F1EC;      /* Soft Oatmeal */
-    --damso-color-border: rgba(0, 0, 0, 0.04); /* Ultra Subtle Border */
-    --damso-color-text: #4E342E;         /* Coffee Brown */
+    /* --- Soft Wood Palette --- */
+    --damso-color-primary: #795548;
+    --damso-color-secondary: #A1887F;
+    --damso-color-bg: #FCFBF8;
+    --damso-color-surface: #F4F1EC;
+    --damso-color-border: rgba(0, 0, 0, 0.04);
+    --damso-color-text: #4E342E;
     --damso-color-text-weak: #8D6E63;
-    --damso-color-accent: #D7CCC8;       /* Beige Accent */
+    --damso-color-accent: #D7CCC8;
 
-    --damso-bg-button: var(--damso-color-primary);
-    --damso-bg-button-hover: var(--damso-color-secondary);
-    --damso-card-border: transparent;    /* Removed border for Matte design */
-    --damso-nav-bg-gradient: linear-gradient(135deg, rgba(252, 251, 248, 0.95), rgba(244, 241, 236, 0.95));
+    /* UI Standard Variables */
+    --damso-btn-color-bg: var(--damso-color-primary);
+    --damso-btn-color-bg-hover: var(--damso-color-secondary);
+    --damso-btn-color-text: #FFFFFF;
+    
+    --damso-card-color-border: transparent;
+    --damso-nav-bg-image: linear-gradient(135deg, rgba(252, 251, 248, 0.95), rgba(244, 241, 236, 0.95));
+    --damso-radius: 8px;
 }
 
 [data-theme="dark"] {
-    /* --- Dark Mahogany Look --- */
     --damso-color-primary: #D7CCC8;
     --damso-color-secondary: #BCAAA4;
-    --damso-color-bg: #211A18;           /* Deep Espresso */
-    --damso-color-surface: #2D2421;      /* Dark Wood */
+    --damso-color-bg: #211A18;
+    --damso-color-surface: #2D2421;
     --damso-color-border: rgba(255, 255, 255, 0.08);
     --damso-color-text: #EFEBE9;
     --damso-color-text-weak: #BCAAA4;
     --damso-color-accent: #795548;
 
-    --damso-bg-button: var(--damso-color-primary);
-    --damso-nav-bg-gradient: linear-gradient(135deg, #211A18, #2D2421);
+    --damso-btn-color-bg: var(--damso-color-primary);
+    --damso-btn-color-text: #211A18;
+    --damso-nav-bg-image: linear-gradient(135deg, #211A18, #2D2421);
 }
 
 body {
     font-family: 'Poppins', 'Noto Sans KR', sans-serif;
-    font-weight: 400;
     background-color: var(--damso-color-bg);
 }
 
-/* Typography Consistency */
-.logo-font,
-.damso-nav__logo,
-.damso-header__title {
+/* Header & Brand Identity */
+.brand-logo {
     font-family: 'Poppins', sans-serif;
     letter-spacing: -1px;
-}
-
-/* Global Readability Overrides */
-h1, h2, h3, h4, h5, h6,
-.damso-section__title,
-.damso-card__title,
-.damso-card__description,
-.damso-process-item__title,
-.damso-faq__title,
-.damso-faq__content {
+    font-weight: 700;
+    font-size: clamp(3rem, 2rem + 6vw, 6rem);
     color: var(--damso-color-text);
 }
 
-/* Matte Sectioning */
-.damso-section--secondary {
-    background-color: var(--damso-color-surface);
+.brand-slogan {
+    font-weight: 300;
+    color: var(--damso-color-secondary);
 }
 
-/* Remove excessive borders from Cards */
+.damso-nav__logo {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -1px;
+    font-weight: 700;
+    color: var(--damso-color-primary);
+}
+
+/* Language Switcher Overrides */
+.damso-lang-btn.active {
+    background-color: var(--damso-color-primary);
+    color: var(--damso-color-bg) !important;
+    box-shadow: 0 4px 12px rgba(121, 85, 72, 0.2);
+}
+
+/* Cards (Matte Style) */
 .damso-card {
     border: none;
     background-color: var(--damso-color-surface);
-    border-radius: var(--damso-radius);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-    transition: all 0.3s ease;
 }
 
 .damso-section--secondary .damso-card {
     background-color: var(--damso-color-bg);
-}
-
-.damso-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
-}
-
-/* Language Switcher (Capsule Style) */
-.damso-lang-switcher {
-    display: inline-flex;
-    padding: 4px;
-    background: var(--damso-color-surface);
-    border: 1px solid var(--damso-color-border);
-    border-radius: 50px;
-}
-
-.damso-lang-btn {
-    padding: 6px 16px;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--damso-color-text-weak);
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background: none;
-    border: 1px solid transparent;
-    cursor: pointer;
-}
-
-.damso-lang-btn.active {
-    background-color: var(--damso-color-primary);
-    color: var(--damso-color-bg);
-    box-shadow: 0 4px 12px rgba(121, 85, 72, 0.2);
-}
-
-[data-theme="dark"] .damso-lang-btn.active {
-    color: var(--damso-color-bg);
-}
-
-.damso-lang-btn:hover:not(.active) {
-    color: var(--damso-color-primary);
-    background: rgba(121, 85, 72, 0.05);
-}
-
-/* Profile List Styling */
-.damso-profile-list__item {
-    border-bottom: 1px solid var(--damso-color-border);
-    padding: 12px 0;
-}
-
-/* Buttons */
-.damso-btn {
-    border-radius: 4px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Footer Styling */
-.damso-footer {
-    background-color: var(--damso-footer-bg);
-    color: #BCAAA4;
-    padding: 40px 0;
-}
-
-.damso-footer a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.damso-footer .render-as-html {
-    color: #EFEBE9;
 }
